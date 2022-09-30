@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ciclo_formativo nombre="DAW">
+    <modulo mod="lenguaje_marcas">
+        <caracter b="obligatorio"/>
+        <horas>6</horas>
+        <fecha_inicio>15/09/22</fecha_inicio>
+        <fecha_fin>30/06/23</fecha_fin>
+    </modulo>
+    <alumnos> 
+        <alumno n="a">
+            <nombre>Ana</nombre>
+            <apellido1>Fernandez</apellido1>
+            <apellido2>Gutierrez</apellido2>
+            <nif>16965696L</nif>
+            <telefono>789654321</telefono>
+            <email>ana.fdezgtrrez@hotmail.com</email>
+            <direccion>C/ El Percebe, 13</direccion>
+            <ciudad>Murcia</ciudad>
+            <cp>30302</cp>   
+        </alumno>
+        <alumno n="p">
+            <nombre>Pepito</nombre>
+            <apellido1>Grillo</apellido1>
+            <nif>98765432H</nif>
+            <telefono>656566555</telefono>
+            <email>yhyh@yahoo.com</email>
+            <direccion>C/ El pez, 5</direccion>
+            <ciudad>Cuenca</ciudad>
+            <cp>16620</cp>
+            <nota>apto</nota>
+            <faltas_asistencia v="no"/>
+        </alumno>
+    </alumnos> 
+</ciclo_formativo>     
