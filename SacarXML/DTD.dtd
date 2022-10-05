@@ -1,0 +1,12 @@
+
+<!ELEMENT árbol (especie)+>
+<!ELEMENT especie (nombre,variedad,(origen)+,color_fruto,
+(maduración)+,(riego)?,(precio)?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT variedad (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT color_fruto (#PCDATA)>
+<!ELEMENT maduración (#PCDATA)>
+<!ELEMENT riego (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+

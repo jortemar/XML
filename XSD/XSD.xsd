@@ -1,0 +1,12 @@
+<xs:schema elementFormDefault="qualified"
+xmlns:xs="./XML.xml">
+<xs:element name="usuario">
+    <xs:complexType>
+    <xs:sequence>
+        <xs:element name="nombre" type="xs:string" />
+        <xs:element name="email" type="xs:string" />
+        <xs:element name="fechaNac" type="xs:string" />
+    </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>

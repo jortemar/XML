@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE usuario SYSTEM "XSD/XSD.xsd">
+<usuario>
+    <nombre>José Ortega</nombre>
+    <email>user@libros.com</email>
+    <fechaNac>2002-10-25</fechaNac>
+</usuario>

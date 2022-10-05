@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE árbol SYSTEM "./DTD.dtd">
+
+<árbol>
+    <especie>
+        <nombre>pino</nombre>
+        <variedad>carrasco</variedad>
+        <origen>macedonia</origen>
+        <origen>tailandia</origen>
+        <color_fruto>rojo</color_fruto>
+        <maduracion>óptima</maduracion>
+        <riego>no</riego>
+        <precio>7</precio>
+    </especie>
+    <especie>
+        <nombre>Jose</nombre>
+        <variedad></variedad>
+        <origen></origen>
+        <color_fruto></color_fruto>
+        <maduracion></maduracion>
+        <riego></riego>
+        <precio></precio>
+    </especie>
+</árbol>

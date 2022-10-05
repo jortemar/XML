@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fp[
+    <!ELEMENT fp (agenda)+>
+    <!ELEMENT agenda (grupo+)>
+    <!ELEMENT grupo (contacto+)>
+    <!ELEMENT contacto (nombre, apellido1, direccion, telefonos)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido1 (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT telefonos (telefonoCasa*, telefonoMovil*, telefonoTrabajo*)>
+    <!ELEMENT telefonoCasa (#PCDATA)>
+    <!ELEMENT telefonoMovil (#PCDATA)>
+    <!ELEMENT telefonoTrabajo (#PCDATA)>
+
+
+    <!ATTLIST grupo letra CDATA #REQUIRED>
+    <!ATTLIST modulo mod CDATA #REQUIRED>
+    <!ATTLIST caracter b CDATA #REQUIRED>
+    <!ATTLIST alumno n CDATA #REQUIRED>
+    <!ATTLIST faltas_asistencia v CDATA #REQUIRED>
+]>
+
+
+<fp>
+
+<agenda>
+    <grupo letra="a">
+        <contacto>
+            <nombre>Antonio</nombre>
+            <apellido1>Hortelano</apellido1>
+            <direccion>Gandia</direccion>
+            <telefonos>
+                <telefonoMovil>660525412</telefonoMovil>
+                <telefonoTrabajo>968545213</telefonoTrabajo>
+            </telefonos>
+        </contacto>
+    </grupo>
+
+    <grupo letra="j">
+        <contacto>
+            <nombre>Jose</nombre>
+            <apellido1>Ortega</apellido1>
+            <direccion>Martinez</direccion>
+            <telefonos>
+                <telefonoCasa>968780510</telefonoCasa>
+                <telefonoMovil>620744602</telefonoMovil>
+            </telefonos>    
+        </contacto>
+    </grupo>    
+</agenda>
+</fp>
