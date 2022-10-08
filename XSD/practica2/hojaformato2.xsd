@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation xml:lang="es">
+            Archivo .xsd de ejemplo para aprender.
+            sdfsdfasdfsdfsdf
+        </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="fechainicio" type="string" maxOccurs="unbounded" minOccurs="0" />
+
+
+
+    <xsd:element name="fp">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="ciclo" maxOccurs="unbounded" minOccurs="0" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="ciclo">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="modulo" maxOccurs="unbounded" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="nombre" type="xsd:string" />
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="modulo">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="fechainicio" type="xsd:string" maxOccurs="1" minOccurs="0" />
+                <xsd:element name="fechafin" type="xsd:string" maxOccurs="1" minOccurs="0" />
+                <xsd:element ref="alumno" maxOccurs="unbounded" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="nombre" type="xsd:string" />
+            <xsd:attribute name="duracion" type="xsd:string" />
+            <xsd:attribute name="caracter" type="xsd:string" />
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="alumno">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="nif" type="xsd:string" />
+                <xsd:element name="direccion" type="xsd:string" />
+                <xsd:element name="cp" type="xsd:integer" />
+                <xsd:element name="poblacion" type="xsd:string" />
+                <xsd:element name="telefono" type="xsd:integer" />
+                <xsd:element name="correo" type="xsd:string" />
+                <xsd:element name="faltaasistencia" type="xsd:integer" />
+                <xsd:element name="calificaciones" type="xsd:string" />
+            </xsd:sequence>
+            <xsd:attribute name="nombre" type="xsd:string" />
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>    
