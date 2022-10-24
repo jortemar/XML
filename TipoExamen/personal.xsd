@@ -1,0 +1,71 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="personal">
+        <xs:complexType>
+            <xs:all>
+                <xs:element minOccurs="1" maxOccurs="1" name="datos-generales" type="datos-generales"/>
+                <xs:element minOccurs="1" maxOccurs="1" name="datos-departamentos" type="datos-departamentos"/>
+            </xs:all>
+            <xs:attribute name="fecha" type="xs:date" use="required"/>
+            <xs:attribute name="multinacional" type="xs:boolean" use="required"/>
+            <xs:attribute name="moneda" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="datos-generales">
+        <xs:sequence>
+            <xs:element name="nombre-empresa" type="xs:string"/>
+            <xs:element name="numero-trabajadores" type="xs:integer"/>
+            <xs:element name="sector">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tecnologia"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="numero" type="xs:integer" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="datos-departamentos">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="departamento" type="departamento"/>
+        </xs:sequence>
+        <xs:attribute name="codigo" type="xs:string" use="required"/>
+        <xs:attribute name="nombre-departamento" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="departamento">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="jefe" type="jefe"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="empleado" type="empleado"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="jefe">
+        <xs:all>
+            <xs:element name="nombre-y-apellidos" type="xs:string"/>
+            <xs:element name="baja"/>
+            <xs:element name="salario" type="xs:float"/>
+            <xs:element name="clave">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string"> 
+                            <xs:attribute name="usuario" type="xs:string" use="required"/> 
+                        </xs:extension>   
+                    </xs:simpleContent> 
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+        <xs:attribute name="usuario" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="empleado">
+        <xs:all>
+            <xs:element name="nombre-y-apellidos" type="xs:string"/>
+            <xs:element name="baja"/>
+            <xs:element name="salario" type="xs:float"/>
+        </xs:all>
+    </xs:complexType>
+    
+</xs:schema>

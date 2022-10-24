@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="Utf-8"?>
+
+<!-- INFORMACIÓN DEL PERSONAL DE LOS DEPARTAMENTOS A FECHA  20-10-2022
+
+NOMBRE: MURCIA 4    NUMERO DE TRABAJADORES :6
+MULITINACIONAL: NO   MONEDA: EURO    SECTOR:DAW
+
+CÓDIGO    DEPARTAMENTO        NOMBRE Y APELLIDOS              BAJA    SALARIO     USUARIO     CLAVE
+ADMIN     Administracion      Ana Sanz Ruiz (Jefa)            NO      4700,58     anasan      32abZki6
+                              Juan Gil Rus (Empleado)         SI      2200,58
+                              Lucas Lopez Tapia (Empleado)    NO      2215,65
+
+INFOR     Informática         Isabel Gomez Pérez(Jefe)        SI      5200,77     isabelgo    8@abcdHj
+                              Oscar Lee Blesa (Empleado)      NO      3109,26     
+
+MARKE     Marketing           Luis Mar Herreros(Jefe)         NO      5111,09     invitado    2@xlzy#@
+-->
+
+
+<!-- Se ha escrito el siguiente documento XML: -->
+
+<personal xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" 
+          xsi:noNamespaceSchemaLocation ="personal.xsd" 
+          fecha="2013-10-20" multinacional="false" moneda="Euro">
+  
+  <datos-generales>
+    <nombre-empresa>MURCIA 4</nombre-empresa>
+    <numero-trabajadores>6</numero-trabajadores>
+    <sector>
+     <tecnologia/>
+    </sector>
+  </datos-generales>
+
+  
+  <datos-departamentos>
+
+    <departamento codigo ="Admin" nombre-departamento="Administracion">
+      <jefe>
+        <nombre-y-apellidos> Ana Sanz Ruiz</nombre-y-apellidos>
+        <salario> 4700,58</salario>
+        <clave usuario=" anasan">32abZki6</clave>
+      </jefe>
+
+      <empleado>
+        <nombre-y-apellidos>Juan Gil Rus</nombre-y-apellidos>
+        <baja />
+        <salario>2200,58</salario>
+      </empleado>
+
+      <empleado>
+        <nombre-y-apellidos>Lucas Lopez Tapia</nombre-y-apellidos>
+        <salario>2215,65</salario>
+      </empleado>
+    </departamento>
+
+
+    <departamento codigo="Infor" nombre-departamento="Informática">
+      <jefe>
+        <nombre-y-apellidos>Isabel gomez Perez</nombre-y-apellidos>
+        <baja />
+        <salario>5200,77</salario>
+        <clave usuario="isabelgo">8@abcdHj</clave>
+      </jefe>
+
+      <empleado>
+        <nombre-y-apellidos>Oscar Lee Blesa</nombre-y-apellidos>
+        <salario>3109,26</salario>
+      </empleado>
+    </departamento>
+
+    <departamento codigo="MARKE" nombre-departamento="Marketing">
+      <jefe>
+        <nombre-y-apellidos>Luis Mar Herreros</nombre-y-apellidos>
+        <salario>5111,09</salario>
+        <clave usuario="invitado">2@xlzY#@</clave>
+      </jefe>
+    </departamento>
+
+  </datos-departamentos>
+</personal>
+
+
+
+
+<!-- 
+Escribir el código del archivo "personal.xsd" que permita validarlo, teniendo en cuenta que:
+
+1.  Todos los elementos y atributos son obligatorios, a menos que se indique lo contrario
+
+
+2.  Los elementos datos-generales y datos-departamentos pueden aparecer indistintamente uno antes que el otros
+
+
+3.  Excepto para los hijos directos de los elementos personal, datos-generales y departamentos, siempre que 
+    sea posible agrupar al menos dos elementos o dos atributos, se debe  utilizar group o attributeGroup
+
+
+4.  Los datos generales de la empresa deben ser de un tipo definido por el usuario al que llamaremos tiposDatosGenerales,
+    donde hay que definir los elementos nombre-empresa, numero-trabajadores (que debe ser un valor entero mayor que cero)
+    y sector. Estos elementos deben escribirse en dicho orden en el documento XML
+
+
+5.  El atributo fecha debe definirse del tipo que se considere mas apropiado, de entre los proporcionados por XML schema
+
+
+6.  El atributo multinacional indica que si la empresa lo es, o no, con  un valor lógico
+
+
+7.  El atributo moneda debe indicarse que es un valor fijo. Pero no es obligatorio
+
+
+8.  El elemento nombre-empresa y el elemento nombre-y-apellidos de los trabajadores, deben ser del mismo tipo, al
+    que llamaremos tipoTexto, y donde debe indicarse que los valores admitidos para dichos elementos pueden ser cadenas
+    de un mínimo de 1 carácter y un máximo de 40.
+
+
+9.  Los posibles sectores son educación, finanzas o tecnología. De tal forma que, sólo uno de ellos debe
+    escribirse en el archivo XML mediante un elemento vacío, como en este caso se ha escrito <tecnología/>
+
+
+10. Se tiene que indicar que el código de cada departamento ha de ser único
+
+
+11. Sin hacer uso de pattern, indica que los posibles nombres de departamento son Administración,
+    Informática, Marketing o Recursos humanos, no permitiéndose otro valor. Para ello, se debe definir
+    un tipo de dato llamado tipoDepartamento, que debe poder ser utilizado por otros atributos o elementos
+
+
+12. Empleado (en cada departamento puede haber de 0 a 3) debe ser de un tipo definido por nosotros al
+    que llamaremos tipoEmpleado, donde hay que definir los posibles valores que pueden tener los elementos
+    'nombre-y-apellidos', 'baja' y 'salario' (que deberán escribirse en ese orden en el documento XML)
+   
+    Por otro lado, jefe (obligatoriamente habrá 1 por departamento) ha de ser de otro tipo llamado tipoJefe,
+    definido como una extensión de tipoEmpleado añadiéndole el elemento clave
+
+
+13. De cada departamento (pueden haber de 1 a ilimitados), primero
+    debe escribirse el jefe y, después, los empleados que hubiese
+
+
+14. Para indicar si un trabajador está de baja, se debe utilizar un elemento vacío, que
+    podrá aparecer (en el caso de que sí esté de baja) o no aparecer (en el caso contrario)
+
+
+15. Sin hacer de uso, pattern, hay que indicar que el valor del salario debe ser un número decimal mayor que 1000, pero
+    no mayor que 9999. Además, dicho valor podrá contener 6 dígitos como máximo y, de ellos, sólo dos podrán ser decimales.
+
+
+16. La clave debe ser de un tipo definido por nosotros al que llamaremos tipoClave, y donde debe indicarse, que los
+    valores admitidos por este tipo pueden ser cadenas de ocho caracteres donde el primero debe ser un dígito del 0
+    al 9; el segundo debe ser un carácter distinto a un dígito; después, pueden aparecer de 2 a 4 letras de la “a” a 
+    la “z”; posteriormente, podrá aparecer, o no, una letra de la “A” a la “Z”; a continuación, tendrá que estar una 
+    de estas tres letras mayúsculas (K, Y, H); y finalmente, podrá aparecer de 0 a 3 caracteres cualesquiera.
+
+
+17. Usuario no es un atributo obligatorio. Ahora bien, si se escribe, debe estar formado por un mínimo de 6
+    caracteres y un máximo de 8 (hay que escribir esta restricción sin hacer uso de pattern). Por otro lado, se debe
+    indicar “invitado” como su valor por defecto.
+
+18. No hay que definir en el schema más tipos de datos que los indicados en el ejercicio:
+    tipoDatosGenerales, tipoDepartamento, tipoEmpleado, tipoJefe, tipoTexto y tipoClave.
+
+-->
