@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceShemaLocation="tipo_examen.xsd">
+
+    <datos-generales>
+        <nombre-empresa>Distanza SA</nombre-empresa>
+        <sede-central>Madrid</sede-central>
+        <almacen-principal>Madrid</almacen-principal>
+    </datos-generales>
+
+    <sucursal codSucursal="1234">
+        <pedido codPedido="T1211212">
+            <zona-exposicion>
+                <ubicacion>Barcelona</ubicacion>
+                <direccion-envio>Calle Tararí Queteví, nº 2, 39393, Madrid</direccion-envio>
+                <nombre-trabajador>Jose Ortega Martinez</nombre-trabajador>
+                <fecha>2022/11/26</fecha>
+                <observaciones>Frágil</observaciones>
+                <plazo-revision>8 días</plazo-revision>
+                <articulo codArt="ASD-232">
+                    <unidades>10</unidades>
+                    <precio>80</precio>
+                    <observaciones>Ninguna</observaciones>
+                </articulo>
+            </zona-exposicion>
+            <zona-gestion>
+                <ubicacion>Barcelona</ubicacion>
+                <albaran>39393939</albaran>
+                <pago>Transferencia</pago>
+            </zona-gestion>
+        </pedido>
+    </sucursal>
+
+    <sucursal codSucursal="5677">
+        <pedido codPedido="Y23423434">
+            <zona-exposicion>
+                <ubicacion>Badajoz</ubicacion>
+                <direccion-envio>Calle Avión Grande, nº 23, 89898 Jumilla(Murcia)</direccion-envio>
+                <nombre-trabajador>Alfonso Pérez Jiménez</nombre-trabajador>
+                <fecha>2020/11/11</fecha>
+                <observaciones>Urgente</observaciones>
+                <plazo-revision>4 días</plazo-revision>
+                <articulo codigoArt="ASD-232">
+                    <UnidadesPedidas>5</UnidadesPedidas>
+                    <PrecioUnidad>120</PrecioUnidad>
+                    <ObservacionesArt>La entrega se retrasa</ObservacionesArt>
+                </articulo>
+            </zona-exposicion>
+            <zona-gestion>
+                <ubicacion>Madrid</ubicacion>
+                <albaran>90909090</albaran>
+                <pago>Contrareembolso</pago>
+            </zona-gestion>
+        </pedido>
+    </sucursal>
+</empresa>

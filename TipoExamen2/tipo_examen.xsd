@@ -1,0 +1,113 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="empresa">
+        <xs:complexType>
+            <xs:all>
+                <xs:element minOccurs="0" maxOccurs="1" name="datos-generales" type="datos-generales"/>
+                <xs:element minOccurs="0" maxOccurs="1" name="sucursal" type="sucursal"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+	
+    <xs:group name="datos-generales">
+        <xs:sequence>
+            <xs:element name="nombre-empresa" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+            <xs:element name="sede-central" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+            <xs:element name="almacen-principal" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="sucursal">
+        <xs:sequence>
+            <xs:element name="pedido" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="codSucursal" type="xs:string" use="required"/>
+    </xs:group>
+
+    <xs:complexType name="departamento">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="jefe" type="jefe"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="empleado" type="empleado"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+
+
+
+
+
+
+
+
+
+	<xs: element name ="Pedidos" type="DatosPedido"/>
+	</xs: complexType name="DatosPedido">
+		<!-- SEQUENCE: ESPECIFICA QUE LOS ELEMENTOS SECUNDARIOS DEBEN APARECER EN UN ORDEN ESPECIFICO. -->
+		<xs: sequence> 
+
+				<!-- MINOCCURS & MAXOCCURS: DEFINE LA FRECUENCIA CON LA QUE UN ELEMENTO PUEDE OCURRIR. MINOCCURS PUEDE APARECER 0 VECES Y MAXOCCURS DE FORMA ILIMITADA.-->
+				<xsd: element name ="Sucursales" type="DatosSucursales" minOccurs="0" maxOccurs="unbounded" /> 
+		</xs: sequence>
+	</xs: complexType>
+	
+
+	<!-- ------------------------------------  DATOS SUCURSALES. ------------------------------------ -->
+	
+	<xs: complexType name = "DatosSucursales"
+		<xs: sequence>
+			<xs: element name="DirEntrega" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs: element name="NombreTrabajador" type="xsd:string" />
+			<xs: element name="FechaPedido" type="xsd:date"/>
+			<!-- Observaciones sobre el pedido, cuyos valores son, si existen, URGENTE o INCOMPLETO. -->
+			<xs: element name ="ObservacionesPedido">
+
+			</xs: element>	
+			<xs: element name = "PlazoRevision">
+				<xs: simpleType>
+					<!-- POSITIVEINTEGER: SE USA PARA ESPECIFICAR UN VALOR NUMERICO SIN UN COMPONENTE FRACCIONARIO POSITIVO.-->
+					<xs: restriction base="xsd:positiveInteger"
+						<xsd: minInclusive values ="1"/>
+					</xs: restriction>
+				</xs: simpleType>
+			</xs: element>
+	<!-- ------------------------------------  DATOS ARTICULOS. ------------------------------------ -->
+	
+		<xs: element name ="Articulos" type="DatosArt" minOccurs="1" maxOccurs="unbounded"/>
+			<xs: sequence>
+				<!-- Código del pedido, que está formado por una cadena de 8 caracteres de los cuales 1º LETRA + 7 NÚMEROS. -->
+				<xs: attribute name="CodigoPedido" type="TipoCodigo" use="required"/>
+	</xs:complexType>
+		<xs:simpleType name ="TipoCodigo">
+			<xs: restriction base ="xs:string">
+				<xs:pattern value="[A-Za-z]([A-Za-z0-9]{7})"/>
+			</xs:restriction>
+		</xs:simpleType>
+	<xs:complexType name ="DatosArt"
+			<xs:sequence>
+				<xs:element name ="UnidadesPedidas">
+					<xs:simpleType>
+						<xs:restriction base= "xs:positiveInteger">
+							<xs:minInclusive value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs: element name="PrecioUnidad"
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:minInclusive value="1"/>
+						</xs:restriction>
+					</xs:simpletype>
+				</xs:element>
+				<xs:element name="ObservacionesArt" type="xs:string"/>
+			</xs:sequence>
+<!-- CÓDIGO DEL ARTICULO: FORMADO POR 3 LETRAS MAYUSCULAS + 3 DIGITOS SEPARADOS POR GUIONES. -->
+		<xs:attribute name="ObservacionesArt" type="xs:string"/>
+	</xs:complexType>
+		<xs:simpletype name="CodigoArt">
+			<xs:restriction base="xsd:string">
+				<xs:pattern value="[A-Z]{3}-[0-9]{3}"/>
+			</xs:restriction>
+		</xs:simpletype>
+</xs:Schema>
