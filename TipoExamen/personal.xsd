@@ -12,6 +12,28 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:group name="personas">
+        <xs:sequence>
+            <xs:element name="empleado" minOccurs="0" maxOccurs="unbounded" type="tipoEmpleado"/>
+            <xs:element name="jefe" minOccurs="0" maxOccurs="unbounded" type="tipoJefe"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:complexType name="tipoEmpleado">
+        <xs:sequence>
+            <xs:group ref="empleado"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoJefe">
+        <xs:sequence>
+            <xs:group ref="jefe"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+        
+    </xs:complexType>
+
     <xs:complexType name="datos-generales">
         <xs:sequence>
             <xs:element name="nombre-empresa" type="xs:string"/>
@@ -42,30 +64,22 @@
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="jefe">
+    <xs:group name="jefe">
         <xs:all>
             <xs:element name="nombre-y-apellidos" type="xs:string"/>
             <xs:element name="baja"/>
             <xs:element name="salario" type="xs:float"/>
             <xs:element name="clave">
-                <xs:complexType>
-                    <xs:simpleContent>
-                        <xs:extension base="xs:string"> 
-                            <xs:attribute name="usuario" type="xs:string" use="required"/> 
-                        </xs:extension>   
-                    </xs:simpleContent> 
-                </xs:complexType>
-            </xs:element>
         </xs:all>
         <xs:attribute name="usuario" type="xs:string" use="required"/>
-    </xs:complexType>
+    </xs:group>
     
-    <xs:complexType name="empleado">
+    <xs:group name="empleado">
         <xs:all>
             <xs:element name="nombre-y-apellidos" type="xs:string"/>
             <xs:element name="baja"/>
             <xs:element name="salario" type="xs:float"/>
         </xs:all>
-    </xs:complexType>
+    </xs:group>
     
 </xs:schema>
