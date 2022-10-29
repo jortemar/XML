@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- 
 <!DOCTYPE aeropuerto[
     <!ELEMENT aeropuerto (nombre, vuelos*, fecha)>
     <!ELEMENT nombre (#PCDATA)>
@@ -14,6 +15,7 @@
     <!ELEMENT hora-salida (#PCDATA)>
     <!ELEMENT hora-llegada (#PCDATA)>   
 ]>
+-->
 
 <aeropuerto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="aeropuerto.xsd">

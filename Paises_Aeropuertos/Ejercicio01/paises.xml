@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- 
 <!DOCTYPE paises[
     <!ELEMENT paises (pais+)>
     <!ELEMENT pais (nombre, ciudad*)>
     <!ELEMENT nombre (#PCDATA)>
     <!ELEMENT ciudad (#PCDATA)>
 ]>
+-->
 
 <paises xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="paises.xsd">
