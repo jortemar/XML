@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="raqueta.xsl" type="text/xsl"?>
+<tienda>
+    <raqueta>
+        <marca>wilson</marca>
+        <modelo>ftac</modelo>
+        <anio>2022</anio>
+    </raqueta>
+    <raqueta>
+        <marca>wilson</marca>
+        <modelo>willson</modelo>
+        <anio>2019</anio>
+    </raqueta>
+</tienda>
