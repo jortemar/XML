@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Apartado3.xsl" type="text/xsl"?>
+<catalogo>
+  <libro isbn="i1">
+    <titulo>Don Quijote</titulo>
+    <autores>
+      <autor nacimiento="1547">Cervantes</autor>
+    </autores>
+  </libro>
+  <libro isbn="i2">
+    <titulo>Antologia</titulo>
+    <autores>
+        <autor nacimiento="1898">Lorca</autor>
+        <autor nacimiento="1910">Miguel Hernandez</autor>
+    </autores>
+  </libro>
+</catalogo>
+
+<!--
+
+1.-Mostrar en un HTML con lista numerada los títulos de los libros con algún autor nacido despues de 1900.
+
+2.-Mostrar en un HTML la lista de los autores ordenada por orden alfabético inverso.
+
+3.-Mostrar el nombre de los autores nacidos despues del año 1700.
+
+-->

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Apartado3.xsl" type="text/xsl"?>
+<inventario>
+    <producto codigo="P1">
+        <peso unidad="kg">10</peso>
+        <nombre>Ordenador</nombre>
+        <lugar edificio="B">
+            <aula>10</aula>
+        </lugar>
+    </producto>
+    <producto codigo="P2">
+        <peso unidad='g'>500</peso>
+        <nombre>Switch</nombre>
+        <lugar edificio="A">
+            <aula>6</aula>
+        </lugar>
+    </producto>
+    <producto codigo="P3">
+        <peso unidad='kg'>15</peso>
+        <nombre>Mesa</nombre>
+        <lugar edificio="B">
+            <aula>6</aula>
+        </lugar>
+    </producto>
+</inventario>
+
+
+<!--
+
+Realizar los siguientes ejercicios:
+
+1. Se pide  mostrar en el resultado la misma información del fichero origen pero solo en los casos en que el lugar
+del producto sea el edificio B
+
+2. Generar una tabla HTML que muestre la información del fichero origen de la manera siguiente:
+                  ordenador   10   B10
+                  switch              5....A6
+                  Mesa ..............15   B6
+
+3. Hacer una plantilla que fabrique una tabla con los datos de los productos del edificio A y otra tabla separada
+para los productos del edificio B
+
+4. Se pide  generar un fichero HTML con una tabla pero en la que solo aparezcan los productos cuyo edificio 
+sea el A y además pesen menos de 7kg.
+
+-->
