@@ -6,9 +6,9 @@ Los dos listados que se ven a continuación ilustran la estructura original y la
 Crear el XSLT que permita convertir la información original en un formato que pueda entender el nuevo sistema.
 -->
 
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet version="1.0" encoding="UTF-8"?>
 <!--Estructura original de la información-->
-
+<?xml-stylesheet type="text/xsl" href="Estilo.xsl"?>
 <listado>
     <cuenta>
         <titular dni="5671001D">Ramon Perez</titular>

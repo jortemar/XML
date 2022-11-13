@@ -9,59 +9,58 @@ tabla separada para los productos del edificio B -->
         </head>
         <body>
             <h3><u>Tabla de productos de edificio A</u></h3>
-            <xsl:for-each select="inventario/producto">    
-                    <xsl:if test="lugar/@edificio='A'">                                          
-                        <table border="1px">
-                            <tr>
-                                <th>Producto</th>
-                                <th>Peso</th>
-                                <th>Lugar</th>
-                            </tr>       
-                            <tr>
-                                <td><xsl:value-of select="nombre"/></td>
-                                <xsl:choose>
-                                    <!-- si el peso está en g, se divide entre 1000 para que se convierta a kg. Si no se queda como está -->
-                                    <xsl:when test="peso/@unidad='g'">
-                                        <xsl:variable name="convertirPeso"><xsl:value-of select="peso"/></xsl:variable>
-                                        <td><xsl:value-of select="$convertirPeso div 1000"/></td>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <td><xsl:value-of select="peso"/></td>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                                <td><xsl:value-of select="lugar/@edificio"/><xsl:value-of select="lugar/aula"/></td>
-                            </tr>
-                        </table>                                              
-                    </xsl:if>                           
-                    
-                    
-            </xsl:for-each>  
+            <table border="1px">
+                <tr>
+                    <th>Producto</th>
+                    <th>Peso</th>
+                    <th>Lugar</th>
+                </tr> 
+                <xsl:for-each select="inventario/producto">    
+                    <xsl:if test="lugar/@edificio='A'">                                                  
+                        <tr>
+                            <td><xsl:value-of select="nombre"/></td>
+                            <xsl:choose>
+                                <!-- si el peso está en g, se divide entre 1000 para que se convierta a kg. Si no se queda como está -->
+                                <xsl:when test="peso/@unidad='g'">
+                                    <xsl:variable name="convertirPeso"><xsl:value-of select="peso"/></xsl:variable>
+                                    <td><xsl:value-of select="$convertirPeso div 1000"/></td>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <td><xsl:value-of select="peso"/></td>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                            <td><xsl:value-of select="lugar/@edificio"/><xsl:value-of select="lugar/aula"/></td>
+                        </tr>                                                              
+                    </xsl:if>           
+                </xsl:for-each>
+            </table>  
+
             <h3><u>Tabla de productos de edificio B</u></h3>
-            <xsl:for-each select="inventario/producto">    
-                    <xsl:if test="lugar/@edificio='B'">                                          
-                        <table border="1px">
-                            <tr>
-                                <th>Producto</th>
-                                <th>Peso</th>
-                                <th>Lugar</th>
-                            </tr>       
-                            <tr>
-                                <td><xsl:value-of select="nombre"/></td>
-                                <xsl:choose>
-                                    <!-- si el peso está en g, se divide entre 1000 para que se convierta a kg. Si no se queda como está -->
-                                    <xsl:when test="peso/@unidad='g'">
-                                        <xsl:variable name="convertirPeso"><xsl:value-of select="peso"/></xsl:variable>
-                                        <td><xsl:value-of select="$convertirPeso div 1000"/></td>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <td><xsl:value-of select="peso"/></td>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                                <td><xsl:value-of select="lugar/@edificio"/><xsl:value-of select="lugar/aula"/></td>
-                            </tr>
-                        </table>                                              
-                    </xsl:if>                                                                                                                                
-            </xsl:for-each>          
+            <table border="1px">
+                <tr>
+                    <th>Producto</th>
+                    <th>Peso</th>
+                    <th>Lugar</th>
+                </tr> 
+        <xsl:for-each select="inventario/producto">    
+            <xsl:if test="lugar/@edificio='B'">                                                  
+                <tr>
+                    <td><xsl:value-of select="nombre"/></td>
+                    <xsl:choose>
+                        <!-- si el peso está en g, se divide entre 1000 para que se convierta a kg. Si no se queda como está -->
+                        <xsl:when test="peso/@unidad='g'">
+                            <xsl:variable name="convertirPeso"><xsl:value-of select="peso"/></xsl:variable>
+                            <td><xsl:value-of select="$convertirPeso div 1000"/></td>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <td><xsl:value-of select="peso"/></td>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <td><xsl:value-of select="lugar/@edificio"/><xsl:value-of select="lugar/aula"/></td>
+                </tr>
+            </xsl:if>           
+        </xsl:for-each>
+            </table>      
         </body>
     </html>
 </xsl:template>
