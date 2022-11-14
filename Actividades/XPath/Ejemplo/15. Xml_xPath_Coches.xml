@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Utf-8"?>
+
+<concesionario>
+
+    <coche combustible="D">
+        <marca>Volkswagen</marca>
+        <modelo>Passat</modelo>
+        <color>Azul</color>
+        <año>1005</año>
+        <precio>7900.00</precio>
+    </coche>
+    
+    <coche combustible="G">
+        <marca>Volkswagen</marca>
+        <modelo>Touran</modelo>
+        <color>Azul</color>
+        <año>2007</año>
+        <precio>8200.00</precio>
+    </coche>
+
+</concesionario>
+    
