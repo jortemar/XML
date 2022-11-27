@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Las entidades se consideran constantes. Pueden usarse
+para abreviar texto, o para utilizar algunos caracteres especiales
+como el signo de menor (<) cuya entidad es (&lt;), u otros más
+conocidos como las tildes (para la 'i' -> &iacute;) -->
+
+<!DOCTYPE bdusuarios [
+    <!ELEMENT bdusuarios (usuario)+>
+    <!ELEMENT usuario (email, nombre, suceso)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT suceso (#PCDATA)>
+    <!ENTITY cliente "Se informa que el usuario ha accedido al">
+    <!ENTITY web "http://www.librolm.com">
+]>
+
+<bdusuarios>
+    <usuario>
+        <email>user1@librolm.com</email>
+        <nombre>Ataulfo G. Pascual</nombre>
+        <suceso> &cliente; registro en la página web &web; </suceso>
+    </usuario>
+    <usuario>
+        <email>user2@librolm.com</email>
+        <nombre>Francisco J. García</nombre>
+        <suceso> &cliente; contenido de &web; para consultar el libro X </suceso>
+    </usuario>
+</bdusuarios>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="fp">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ciclo" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ciclo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="modulo" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="modulo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fechainicio" type="xs:string" maxOccurs="1"/>
+                <xs:element name="fechafin" type="xs:string" maxOccurs="1"/>
+                <xs:element name="alumno" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+            <xs:attribute name="caracter" type="xs:string" />
+            <xs:attribute name="duracion" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="alumno">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="nif" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="direccion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="cp" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="poblacion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="telefono" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="correo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="faltassistencia" type="xs:integer" maxOccurs="1"/>
+                <xs:element name="calificaciones" type="xs:string" maxOccurs="1"/>
+            </xs:all>
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>    

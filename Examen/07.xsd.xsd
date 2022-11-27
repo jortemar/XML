@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="usuarios">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="usuario" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="usuario">
+        <xs:complexType>
+            <!-- con xs:sequence los elementos deben aparecer todos
+                una sola vez y en el orden que se especifica -->
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" />
+                <xs:element name="email" type="xs:string" />
+                <xs:element name="fechaNac" type="xs:date" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+<!-- IGUAL PERO HECHO CON REFERENCIAS
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="usuario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre" />
+                <xs:element ref="email" />
+                <xs:element ref="fechaNac" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<xs:element name="nombre" type="xs:string" />
+<xs:element name="email" type="xs:string" />
+<xs:element name="fechaNac" type="xs:date" />
+-->
+
+<!-- XS:CHOICE (aparece solo uno de los elementos hijos. En este
+    caso te puedes loguear por nombre de usuario o por email)
+<xs:element name="usuario">
+    <xs:complexType>
+        <xs:choice>
+            <xs:element name="nombreU" type="xs:string" />
+            <xs:element name="email" type="xs:string" />
+        </xs:choice>    
+    </xs:complexType>
+</xs:element>        
+-->
+
+<!-- XS:ALL (los elementos pueden aparecer
+    en cualquier orden una sola vez)
+<xs:element name="usuario">
+    <xs:complexType>
+        <xs:all>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="email" type="xs:string" />
+            <xs:element name="fechaNac" type="xs:string" />
+        </xs:all>    
+    </xs:complexType>
+</xs:element>
+-->
+
+<!-- XS:ATTRIBUTE (ejemplo atributo)
+<xs:element name="usuario">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="dni" type="xs:string" />
+            </xs:extension>      
+        </xs:simpleContent>    
+    </xs:complexType>
+</xs:element>
+-->

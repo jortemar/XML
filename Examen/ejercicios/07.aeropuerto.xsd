@@ -1,0 +1,40 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="aeropuerto">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="nombre" type="xs:string" />
+                <xs:element name="vuelos" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="fecha" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="vuelos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vuelo" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="vuelo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="diario" minOccurs="0" maxOccurs="1" />
+                <xs:element name="origen" type="xs:string" minOccurs="0" maxOccurs="5" />     
+                <xs:element name="destino" type="xs:string" minOccurs="0" maxOccurs="5" />       
+                <xs:element name="hora-salida" type="xs:time" minOccurs="0" maxOccurs="5" />       
+                <xs:element name="hora-llegada" type="xs:time" minOccurs="0" maxOccurs="5" />       
+            </xs:sequence>
+            <xs:attribute name="código" type="xs:ID" use="required" />
+            <xs:attribute name="estado" type="tipo_estado" default="E"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="tipo_estado">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[C, E, R]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

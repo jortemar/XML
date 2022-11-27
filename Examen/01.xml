@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+    <contacto>
+        <!-- CDDATA permite añadir contenido sin ser procesado. Es 
+        similar al comentario y debe aparecer dentro del elemento raíz -->
+        <![CDATA[contenido dentro del bloque]]>
+        <nombre> Jose </nombre>
+        <ciudad cp="30520"> Jumilla </ciudad>
+        <teléfono n="968780510" />
+        <email> alpistico@gmail.com </email>
+        <casado v="no" />
+    </contacto>
+</agenda>

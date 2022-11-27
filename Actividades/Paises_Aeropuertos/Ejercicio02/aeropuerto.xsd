@@ -13,8 +13,7 @@
         <xs:sequence>
             <xs:element minOccurs="0" maxOccurs="unbounded" name="vuelo"/>
         </xs:sequence>
-        <xs:attribute name="código" type="xs:ID" use="required"/>
-        <xs:attribute name="estado" type="state" use="optional" default="E"/>
+        
     </xs:complexType>
 
     <xs:complexType name="vuelo">
@@ -25,6 +24,8 @@
             <xs:element name="hora-salida" type="xs:time" minOccurs="0"/>
             <xs:element name="hora-llegada" type="xs:time" minOccurs="0"/>
         </xs:sequence>
+        <xs:attribute name="código" type="xs:ID" use="required"/>
+        <xs:attribute name="estado" type="state" use="optional" default="E"/>
     </xs:complexType>
 
     <xs:simpleType name="state">

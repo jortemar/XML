@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"
+standalone="no"?>
+<!-- Podemos usar el atributo standalone para indicar si
+    el DTD es externo ("no") o interno ("yes")
+    No es obligatorio  -->
+
+<!-- Utilizamos este formato de <!DOCTYPE para llamar al archivo .dtd -->
+<!DOCTYPE BDcomponentes SYSTEM "03.dtd_aparte.dtd">
+
+<BDcomponentes>
+    <componente>
+        <nombre>resistencia</nombre>
+        <precio>0.25</precio>
+        <tipo>pasivo</tipo>
+        <tipo>bobinadas</tipo>
+        <medida>ohmios</medida>
+    </componente>
+    <componente>
+        <nombre>condensador</nombre>
+        <precioiva>0.75</precioiva>
+        <medida>Faradios</medida>
+    </componente>
+</BDcomponentes>

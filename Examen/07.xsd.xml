@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usuarios xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="07.xsd.xsd">
+    <usuario>
+        <nombre>Francisco J. García</nombre>
+        <email>user2@librolm.com</email>
+        <fechaNac>2018-10-25</fechaNac>
+    </usuario>
+</usuarios>

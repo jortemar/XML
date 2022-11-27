@@ -1,0 +1,18 @@
+<!-- El primer + en el tipo 'especie' en el elemento raíz 'árbol'
+nos indica que puede haber tantas especies como queramos-->
+<!-- ' ? ' el elemento puede aparecer cero o una vez (opcional) -->
+<!-- ' * ' el elemento puede aparecer cero, una, o varias veces (opcional) -->
+<!-- ' + ' el elemento debe aparecer una o más veces (obligatorio) -->
+<!-- ' | ' puede añadirse uno de los dos elementos que se especifiquen, pero no ambos (obligatorio) -->
+
+
+<!ELEMENT árbol (especie)+>
+<!ELEMENT especie (nombre,variedad,(origen)+,color_fruto,
+(maduración)+,(riego)?,(precio)?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT variedad (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT color_fruto (#PCDATA)>
+<!ELEMENT maduración (#PCDATA)>
+<!ELEMENT riego (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>

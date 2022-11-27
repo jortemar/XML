@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bdproductos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="08.xsd_restricciones.xsd">
+    <producto>
+        <nombre>teclado</nombre>
+        <código>C001</código>
+        <categoría>A</categoría>
+        <iva>21</iva>
+        <precio>15</precio>
+        <descuento>10</descuento>
+    </producto>
+    <producto>
+        <nombre>monitor</nombre>
+        <código>C002</código>
+        <categoría>B</categoría>
+        <iva>21</iva>
+        <precio>147.2</precio>
+        <descuento>9</descuento>
+    </producto>
+</bdproductos>

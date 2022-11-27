@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fp>
+<fp xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="02.obtenerXSD.xsd">
+  <ciclo nombre="DAW"> 
+    <modulo nombre="DAES" caracter="obligatorio" duracion="4 horas semanales">
+      <fechainicio>15 de septiembre de 2022</fechainicio>
+      <fechafin>30 junio de 2023</fechafin>
+      <alumno nombre="Alvaro">
+        <nif>1698484</nif>
+        <direccion>Aqui</direccion>
+        <cp>30030  </cp>
+        <poblacion>santander</poblacion>
+        <telefono>878798657</telefono>
+        <correo>kdkdkdk@gmail.com</correo>
+        <faltassistencia></faltassistencia>
+        <calificaciones></calificaciones>
+      </alumno>
+      <alumno nombre="Izan">
+       <nif>8484848</nif>
+       <direccion>esta</direccion> 
+       <cp>3942</cp>
+       <poblacion>Bilbao</poblacion>
+       <telefono>8676766</telefono>
+       <correo>ieieieei@gmail.com</correo>
+       <faltassistencia>0</faltassistencia>
+       <calificaciones>aptp</calificaciones>
+      </alumno>
+    </modulo>
+  </ciclo>
+</fp>

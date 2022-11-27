@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Dado el DTD para crear distintas especies de árboles,
+    obtén un XML asociado: -->
+<!DOCTYPE arbol [
+    <!ELEMENT arbol (especie)+>
+    <!ELEMENT especie (nombre, variedad, (origen)+, color_fruto, (maduracion)+, (riego)?, (precio)?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT variedad (#PCDATA)>
+    <!ELEMENT origen (#PCDATA)>
+    <!ELEMENT color_fruto (#PCDATA)>
+    <!ELEMENT maduracion (#PCDATA)>
+    <!ELEMENT riego (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+]>
+
+<arbol>
+    <especie>
+        <nombre>pino</nombre>
+        <variedad>carrasco</variedad>
+        <origen>tailandia</origen>
+        <color_fruto>verde</color_fruto>
+        <maduracion>agosto</maduracion>
+        <maduracion>septiembre</maduracion>
+        <maduracion>octubre</maduracion>
+        <riego>si</riego>
+        <precio>3.50</precio>
+    </especie>
+    <especie>
+        <nombre>abeto</nombre>
+        <variedad>abetum grandum</variedad>
+        <origen>marruecos</origen>
+        <origen>tunez</origen>
+        <color_fruto>marron</color_fruto>
+        <maduracion>junio</maduracion>
+        <precio>4.20</precio>
+    </especie>    
+</arbol>

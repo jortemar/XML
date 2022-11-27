@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="bdproductos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="producto" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="producto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" />
+                <xs:element name="código" type="longitudCadena" />
+                <xs:element name="categoría" type="rango" />
+                <xs:element name="iva" type="xs:integer" />
+                <xs:element name="precio" type="restrictDecimal" />
+                <xs:element name="descuento" type="restrictDescuento" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="longitudCadena">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="4" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- TAMBIÉN PUEDE HACERSE ASÍ, RESTRINGIENDO POR LA LONGITUD TOTAL DE LA CADENA
+    <xs:simpleType name="Tlongitud">
+        <xs:restriction base="xs:string">
+            <xs:length value="4" />
+        </xs:restriction>
+    </xs:simpleType>
+    -->
+
+    <xs:simpleType name="rango">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-E]" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- TAMBIÉN PUEDE HACERSE ASÍ, CON ENUMERACIÓN 
+    <xs:simpleType name="Tcat">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="A" />
+            <xs:enumeration value="B" />
+            <xs:enumeration value="C" />
+            <xs:enumeration value="D" />
+            <xs:enumeration value="E" />
+        </xs:restriction>
+    </xs:simpleType>
+    -->
+
+    <xs:simpleType name="restrictDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="4" />
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="restrictDescuento">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>    
