@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="09.xslt_estilo.xsl" type="text/xsl"?>
+
+<tienda>
+    <raqueta>
+        <marca>Babolat</marca>
+        <modelo>Pure Drive</modelo>
+        <año>2012</año>
+        <precio>170</precio>
+    </raqueta>
+    <raqueta>
+        <marca>Babolat</marca>
+        <modelo>Pure Storm</modelo>
+        <año>2013</año>
+        <precio>190</precio>
+    </raqueta>
+    <raqueta>
+        <marca>Yonex</marca>
+        <modelo>MPTour5</modelo>
+        <año>1997</año>
+        <precio>150</precio>
+    </raqueta>
+    <raqueta>
+        <marca>Wilson</marca>
+        <modelo>Hammer</modelo>
+        <año>2000</año>
+        <precio>95</precio>
+    </raqueta>
+    <raqueta>
+        <marca>Wilson</marca>
+        <modelo>Pro Staff</modelo>
+        <año>1997</año>
+        <precio>215</precio>
+    </raqueta>
+</tienda>
