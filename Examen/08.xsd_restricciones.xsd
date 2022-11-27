@@ -42,7 +42,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <!-- TAMBIÉN PUEDE HACERSE ASÍ, CON ENUMERACIÓN 
+    <!-- TAMBIÉN PUEDE HACERSE ASÍ, CON ENUMERACIÓN EN LUGAR DE USAR EXPRESIONES REGULARES
     <xs:simpleType name="Tcat">
         <xs:restriction base="xs:string">
             <xs:enumeration value="A" />
