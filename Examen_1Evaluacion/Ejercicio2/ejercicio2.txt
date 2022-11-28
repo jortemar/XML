@@ -1,0 +1,3 @@
+<xs:element name="puertaCerrada" type="xs:boolean" default="false"/>
+
+<xs:element name="ventanaAbierta" type="xs:boolean" fixed="true"/>

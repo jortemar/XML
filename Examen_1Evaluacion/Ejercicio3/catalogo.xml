@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Cambiar el 'href' a "apartadoB.xsl" para
+    comprobar el otro ejercicio -->
+<?xml-stylesheet href="apartadoB.xsl" type="text/xsl"?>
+
+<catalogo>
+    <libro isbn="i1">
+        <titulo>Don Quijote</titulo>
+        <autores>
+            <autor nacimiento="1547">Cervantes</autor>
+        </autores>
+    </libro>
+    <libro isbn="i2">
+        <titulo>Antologia</titulo>
+        <autores>
+            <autor nacimiento="1898">Lorca</autor>
+            <autor nacimiento="1910">Miguel Hernandez</autor>
+        </autores>
+    </libro>
+</catalogo>    

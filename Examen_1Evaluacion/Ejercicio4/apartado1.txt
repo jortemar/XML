@@ -1,0 +1,7 @@
+for $baile in //baile
+order by $baile/sala
+return 
+   <baile>
+      {$baile/profesor}
+      {$baile/sala}
+   </baile>

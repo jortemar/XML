@@ -1,0 +1,8 @@
+for $profesor in distinct-values(//profesor)
+let $salas := /bailes/baile[profesor=$profesor]/sala
+order by $profesor
+return 
+   <profesores>
+     <nombre> {$profesor} </nombre>
+     {$salas}
+   </profesores>
