@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE concesionario [
-    <!ELEMENT concesionario (coche+)>
-    <!ELEMENT coche (marca, modelo, color, año, precio)>
-    <!ATTLIST coche combustible CDATA (D|G) #REQUIRED>
-    <!ELEMENT marca (#PCDATA)>
-    <!ELEMENT modelo (#PCDATA)>
-    <!ELEMENT color (#PCDATA)>
-    <!ELEMENT año (#PCDATA)>
-    <!ELEMENT precio (#PCDATA)>
-]>
-
 <concesionario>
     <coche combustible="D">
         <marca>Volkswagen</marca>
