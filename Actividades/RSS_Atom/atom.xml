@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://www.librolm.com</id>
+    <title>árboles tropicales</title>
+    <updated>2018-04-13T10:25:02Z</updated>
+    <link href="http://librolm.com/atom/downloadservice.xml" rel="self" type="application/atom+xml" hreflang="es" title="Enlace al mismo documento" length="2506" />
+    <author>
+        <name>autor1</name>
+        <email>autor1@librolm.com</email>
+        <uri>http://www.librolm.com</uri>
+    </author>
+    <subtitle>Árboles tropicales en Málaga</subtitle>
+    <rights>© 2007 TutorialsPoint.com</rights>
+    <contributor>
+        <name>José Antonio López López</name>
+        <email>joseantlopez@librolm.com</email>
+        <uri>https://www.libroslm.com</uri>
+    </contributor>
+    <generator uri="http://www.miweb.com/" version="1.0">herramienta usada</generator>
+    <logo>/mi_logo.jpg</logo>
+    <icon>/mi_icono.jpg</icon>
+    <category term="categoría del feed" />
+    <entry>
+        <id>http://www.librolm.com/1978</id>
+        <title>El cultivo del aguacate</title>
+        <updated>2018-01-19T19:25:03-05:00</updated>
+        <content>contenido</content>
+        <summary>resumen de la entrada</summary>
+        <rights type="html">Todos los derechos reservados &lt;em&gt; LibroLm.com&lt;/em&gt;</rights>
+        <contributor>
+            <name>Francisco González</name>
+            <email>francisco.gonzalez@librolm.com</email>
+            <uri>http://franciscogonzalez.librolm.com</uri>
+        </contributor>
+        <published>2018-01-13T12:55:10Z></published>
+        <source>
+            <id>http://www.miweb.com/</id>
+            <title>cultivo de aguacates en Colombia</title>
+            <updated>2018-05-20T12:34:05Z</updated>
+            <rights>© 2018 todos los derechos reservados MiWeb.</rights>
+        </source>
+        <author>
+            <name>José A. López López</name>
+            <email>jose.lopez@librolm.com</email>
+            <uri>https://www.libroslm.com</uri>
+        </author>
+        <link rel="alternate" type="text/html" href="http://www.librolm.com/contenido1" hreflang="es" />
+        <category term="deporte" />
+    </entry>
+</feed>

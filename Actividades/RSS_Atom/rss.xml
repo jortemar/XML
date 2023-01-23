@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-xs:noNamespaceSchemaLocation="./ejercicio.xsd">
+<rss version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="./rss.xsd">
     <channel>
         <title>Agenda de contactos</title>
         <link>https://www.agendacontactos.com</link>
         <description>Página web para consulta de contactos</description>
-        <category>contactos/datos</category>
+        <category domain="rpc.sys.com">contactos/datos</category>
         <docs>http://blogs.law.umu.edu/contactos/rss</docs>
         <ttl>60</ttl>
         <pubDate>Wed, 21 Jan 2015 21:36:12 +0100</pubDate>
@@ -37,8 +36,8 @@ xs:noNamespaceSchemaLocation="./ejercicio.xsd">
         <managingEditor>editor1@librolm.com</managingEditor>
         <webMaster>2b@librolm.com</webMaster>
         <textInput>
-            <descripton>Habrá que introducir el nombre completo, así como
-                la dirección, números de teléfono y direcciones de email del usuario </descripton>
+            <description>Habrá que introducir el nombre completo, así como
+                la dirección, números de teléfono y direcciones de email del usuario </description>
             <link>http://www.lanzadorScript.com</link>
             <title>Almacenar datos</title>
             <name>Contacto</name>
@@ -53,8 +52,7 @@ xs:noNamespaceSchemaLocation="./ejercicio.xsd">
             <author>autor1@librolm.com</author>
             <category></category>
             <comments>http://www.librolm.com/agenda/contactos.aspx</comments>
-            <enclosure url="http://www.unaurlcualquiera.com" lenth="3256" type="video/x-ms-wmv" />
+            <enclosure url="http://www.unaurlcualquiera.com" lenght="3256" type="video/x-ms-wmv" />
         </item>
-    </channel>
-    
+    </channel> 
 </rss>
