@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="./ejercicio.xsd">
+    <channel>
+        <title>Agenda de contactos</title>
+        <link>https://www.agendacontactos.com</link>
+        <description>Página web para consulta de contactos</description>
+        <category>contactos/datos</category>
+        <docs>http://blogs.law.umu.edu/contactos/rss</docs>
+        <ttl>60</ttl>
+        <pubDate>Wed, 21 Jan 2015 21:36:12 +0100</pubDate>
+        <image>
+            <url>http://www.librolm.com/agenda/imagenes/image1.jpg</url>
+            <title>Datos de contacto</title>
+            <link>http://www.librolm.com/contactos.aspx</link>
+            <description>Agenda con datos</description>
+            <height>120</height>
+            <width>80</width>
+        </image>
+        <copyright>Copyright 2015 AgendaLM</copyright>
+        <lastBuildDate>Tue, 19 Dec 2016 16:21:11 +0100</lastBuildDate>
+        <rating>http://www.enlacespics.com</rating>
+        <skipDays>
+            <day>Saturday</day>
+            <day>Sunday</day>
+        </skipDays>
+        <skipHours>
+            <hour>0</hour>
+            <hour>1</hour>
+            <hour>2</hour>
+            <hour>3</hour>
+            <hour>4</hour>
+        </skipHours>
+        <generator>FeedForAll v2.0 (2.0.4.0)</generator>
+        <language>spanish</language>
+        <cloud domain="rpc.sys.com" port="80" path="/RPC2" registerProcedure="my_Cloud.rssPleaseNotify" protocol="xml-rpc" />
+        <managingEditor>editor1@librolm.com</managingEditor>
+        <webMaster>2b@librolm.com</webMaster>
+        <textInput>
+            <descripton>Habrá que introducir el nombre completo, así como
+                la dirección, números de teléfono y direcciones de email del usuario </descripton>
+            <link>http://www.lanzadorScript.com</link>
+            <title>Almacenar datos</title>
+            <name>Contacto</name>
+        </textInput>
+        <item>
+            <title>XHTML</title>
+            <link>https://www.librolm.com/xhtml.html</link>
+            <description>Página para almacenar los contactos</description>
+            <source url="http://www.agendadecontactos.com/longan.xml"> Contactos </source>
+            <guid>DC1EF2-7B52-4CD5-EF4E5E6DFF</guid>
+            <pubDate>Tue, 19 Dec 2018 15:31:19 +0100</pubDate>
+            <author>autor1@librolm.com</author>
+            <category></category>
+            <comments>http://www.librolm.com/agenda/contactos.aspx</comments>
+            <enclosure url="http://www.unaurlcualquiera.com" lenth="3256" type="video/x-ms-wmv" />
+        </item>
+    </channel>
+    
+</rss>
