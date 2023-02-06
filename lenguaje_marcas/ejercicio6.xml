@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Manual LM</title>
+        <link>http://www.librolm.com</link>
+        <description> Apuntes XML ciclos ASIR DAM DAW</description>
+        <language>es-es</language>
+        <webMaster>wm@librolm.com</webMaster>
+        <item>
+            <title>Esquema HTML</title>
+            <author>autor2@librolm.com</author>
+            <category>informática</category>
+        </item>
+        <item>
+            <title>Esquema XHTML</title>
+            <author>autor1@librolm.com</author>
+            <category>informática</category>
+        </item>
+        <item>
+            <title>Esquema XML</title>
+            <author>autor@librolm.com</author>
+            <category>informática</category>
+        </item>
+    </channel>
+</rss>

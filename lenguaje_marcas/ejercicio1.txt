@@ -1,0 +1,26 @@
+Entrando en la página web de www.elpais.com, me encuentro el enlace
+RSS en la parte inferior de la misma. Se trata de la versión 2.0 de rss.
+
+Adjunto las primeras líneas del archivo rss.
+
+<rss version="2.0">
+    <channel>
+        <title>EL PAÍS: el periódico global</title>
+        <description>
+            Noticias de última hora sobre la actualidad en España y el mundo: política, economía, deportes, cultura, sociedad, tecnología, gente, opinión, viajes, moda, televisión, los blogs y las firmas de EL PAÍS. Además especiales, vídeos, fotos, audios, gráficos, entrevistas, promociones y todos los servicios de EL PAÍS.
+        </description>
+        <language>es</language>
+        <link>https://elpais.com</link>
+        <lastBuildDate>Mon, 06 Feb 2023 18:26:15 GMT</lastBuildDate>
+        <item>
+            <guid isPermaLink="true">
+                https://elpais.com/internacional/2023-02-06/un-terremoto-de-78-grados-sacude-el-sur-de-turquia.html
+            </guid>
+        <title>
+            Dos potentes terremotos dejan más de 2.600 muertos en Turquía y Siria
+        </title>
+        <pubDate>Mon, 06 Feb 2023 18:13:09 GMT</pubDate>
+        <link>
+            https://elpais.com/internacional/2023-02-06/un-terremoto-de-78-grados-sacude-el-sur-de-turquia.html
+        </link>
+        <dc:creator>Andrés Mourenza </dc:creator>

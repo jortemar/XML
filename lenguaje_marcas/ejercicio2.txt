@@ -1,0 +1,4 @@
+El documento RSS consultado es tremendamente extenso, con mas de mil líneas.
+Como siempre, consta de una etiqueta inicial channel, en cuyo interior
+nos encontramos todas las etiquetas obligatorias (title, description, language...), además de muchas
+opcionales como category, dcterms, o media.

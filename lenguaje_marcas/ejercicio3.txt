@@ -1,0 +1,2 @@
+Tres elementos obligatorios serían title, link y description
+Tres elementos no obligatorios serían managingEditor, language, o webMaster.

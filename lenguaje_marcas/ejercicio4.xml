@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Página web LM</title>
+        <link>https://www.librolm.com</link>
+        <description>página web sobre lenguaje de marcas</description>
+        <skipDays>
+            <day>Friday</day>
+            <day>Saturday</day>
+            <day>Sunday</day>
+        </skipDays>
+    </channel>
+</rss>
